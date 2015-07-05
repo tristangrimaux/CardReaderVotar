@@ -1,21 +1,20 @@
 
-Android CardReader Sample
+Prueba de concepto "Comprar votos con el sistema de Vot.ar"
 ===================================
 
-This sample demonstrates how to implement a low-level NFC card reader, for reading cards
-that do not contain NDEF or Android Beam data. This sample is designed to read the virtual
-loyalty card implemented in the "CardEmulation" sample.
+Este ejemplo, creado en base al ejemplo de lectura de tarjetas NFC que hizo Google, es una
+prueba de concepto de cómo una persona podría, con un celular, controlar el voto de personas
+bajo su comando con total discresión.
 
-
-In particular, this sample demonstrates how to disable Android Beam, select which AIDs the
-reader is interested, and establish communication with the card
-
-Pre-requisites
+Pre-requisitos
 --------------
 
 - Android SDK v22
 - Android Build Tools v22.0.1
 - Android Support Repository
+
+--------------
+El resto del README corresponde al ejemplo de Google
 
 Getting Started
 ---------------
@@ -23,20 +22,13 @@ Getting Started
 This sample uses the Gradle build system. To build this project, use the
 "gradlew build" command or use "Import Project" in Android Studio.
 
-Support
--------
-
-- Google+ Community: https://plus.google.com/communities/105153134372062985968
-- Stack Overflow: http://stackoverflow.com/questions/tagged/android
-
-If you've found an error in this sample, please file an issue:
 https://github.com/googlesamples/android-CardReader
 
 Patches are encouraged, and may be submitted by forking this project and
 submitting a pull request through GitHub. Please see CONTRIBUTING.md for more details.
 
-License
--------
+Utilizo la misma licencia que el ejemplo de Google
+--------------------------------------------------
 
 Copyright 2014 The Android Open Source Project, Inc.
 
