@@ -30,7 +30,7 @@ submitting a pull request through GitHub. Please see CONTRIBUTING.md for more de
 Utilizo la misma licencia que el ejemplo de Google
 --------------------------------------------------
 
-Copyright 2014 The Android Open Source Project, Inc.
+Copyright 2015 Tristán Grimaux
 
 Licensed to the Apache Software Foundation (ASF) under one or more contributor
 license agreements.  See the NOTICE file distributed with this work for
