@@ -16,7 +16,7 @@
 -->
 
 <resources>
-    <string name="app_name">CardReader</string>
+    <string name="app_name">VotoControl</string>
     <string name="intro_message">
         <![CDATA[
 

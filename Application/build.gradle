@@ -32,12 +32,10 @@ List<String> dirs = [
 android {
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
-
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 22
         targetSdkVersion 22
     }
-
     packagingOptions {
         exclude 'META-INF/License.txt'
         exclude 'META-INF/LICENSE.txt'
@@ -47,7 +45,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
-
     sourceSets {
         main {
             dirs.each { dir ->
@@ -59,7 +56,8 @@ android {
         androidTest.java.srcDirs = ['tests/src']
 
     }
-
+    productFlavors {
+    }
 }
 
 

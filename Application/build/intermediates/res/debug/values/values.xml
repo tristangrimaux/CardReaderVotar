@@ -24,7 +24,7 @@
     <string name="account_number">Datos del voto</string>
     <!-- From: file:/home/tristan/AndroidStudioProjects/CardReader/Application/src/main/res/values/base-strings.xml -->
     <eat-comment/>
-    <string name="app_name">CardReader</string>
+    <string name="app_name">VotoControl</string>
     <!-- From: file:/home/tristan/AndroidStudioProjects/CardReader/Application/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="card_title">Voto maestro</string>

@@ -20,7 +20,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="19"
+        android:minSdkVersion="22"
         android:targetSdkVersion="22" />
 
     <!-- NFC Reader Mode was added in API 19. -->
