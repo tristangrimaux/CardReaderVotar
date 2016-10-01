@@ -58,7 +58,10 @@ public class BallotCardReader implements NfcAdapter.ReaderCallback {
         Log.i(TAG, "New tag discovered");
         Log.i(TAG, "Tag: " + VotarProtocol.BuildTagId(tag.getId(),0));
         VotarProtocol mVotarProtocol;
+        Log.i(TAG, "antes del get");
         NfcV nfcvTag = NfcV.get(tag);
+        Log.i(TAG, "despue del get");
+
         if (nfcvTag != null) {
             mVotarProtocol = new VotarProtocol();
             try {
@@ -71,7 +74,9 @@ public class BallotCardReader implements NfcAdapter.ReaderCallback {
                 Log.i(TAG, "-----------------------");
                 Log.i(TAG, "Tag ID: " + mVotarProtocol.tagID());
                 Log.i(TAG, "-----------------------");
+                Log.i(TAG, "antes de tranceive");
                 byte[] xdata = nfcvTag.transceive(getCommand(tag.getId(), false));
+                Log.i(TAG, "despue del transxceivre");
                 mVotarProtocol.setBallotData(xdata);
 
                 //Log.i(TAG, VotarProtocol.ByteArrayToHexString(mVotarProtocol.rawdata));

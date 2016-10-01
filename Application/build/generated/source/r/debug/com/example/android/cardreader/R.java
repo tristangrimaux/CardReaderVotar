@@ -116,22 +116,22 @@ containing a value of this type.
         public static final int contentPaddingTop=0x7f010009;
     }
     public static final class color {
-        public static final int cardview_dark_background=0x7f050000;
-        public static final int cardview_light_background=0x7f050001;
-        public static final int cardview_shadow_end_color=0x7f050002;
-        public static final int cardview_shadow_start_color=0x7f050003;
+        public static final int cardview_dark_background=0x7f070000;
+        public static final int cardview_light_background=0x7f070001;
+        public static final int cardview_shadow_end_color=0x7f070002;
+        public static final int cardview_shadow_start_color=0x7f070003;
     }
     public static final class dimen {
-        public static final int cardview_compat_inset_shadow=0x7f060000;
-        public static final int cardview_default_elevation=0x7f060001;
-        public static final int cardview_default_radius=0x7f060002;
-        public static final int horizontal_page_margin=0x7f060003;
-        public static final int margin_huge=0x7f060004;
-        public static final int margin_large=0x7f060005;
-        public static final int margin_medium=0x7f060006;
-        public static final int margin_small=0x7f060007;
-        public static final int margin_tiny=0x7f060008;
-        public static final int vertical_page_margin=0x7f060009;
+        public static final int cardview_compat_inset_shadow=0x7f050002;
+        public static final int cardview_default_elevation=0x7f050003;
+        public static final int cardview_default_radius=0x7f050004;
+        public static final int horizontal_page_margin=0x7f050000;
+        public static final int margin_huge=0x7f050005;
+        public static final int margin_large=0x7f050006;
+        public static final int margin_medium=0x7f050007;
+        public static final int margin_small=0x7f050008;
+        public static final int margin_tiny=0x7f050009;
+        public static final int vertical_page_margin=0x7f050001;
     }
     public static final class drawable {
         public static final int card_background=0x7f020000;
@@ -157,23 +157,23 @@ containing a value of this type.
         public static final int main=0x7f090000;
     }
     public static final class string {
-        public static final int account_number=0x7f070000;
-        public static final int app_name=0x7f070001;
-        public static final int card_title=0x7f070002;
-        public static final int intro_message=0x7f070003;
-        public static final int sample_hide_log=0x7f070004;
-        public static final int sample_show_log=0x7f070005;
+        public static final int account_number=0x7f080000;
+        public static final int app_name=0x7f080001;
+        public static final int card_title=0x7f080002;
+        public static final int intro_message=0x7f080003;
+        public static final int sample_hide_log=0x7f080004;
+        public static final int sample_show_log=0x7f080005;
     }
     public static final class style {
-        public static final int AppTheme=0x7f080000;
-        public static final int CardView=0x7f080001;
-        public static final int CardView_Dark=0x7f080002;
-        public static final int CardView_Light=0x7f080003;
-        public static final int Theme_Base=0x7f080004;
-        public static final int Theme_Sample=0x7f080005;
-        public static final int Widget=0x7f080006;
-        public static final int Widget_SampleMessage=0x7f080007;
-        public static final int Widget_SampleMessageTile=0x7f080008;
+        public static final int AppTheme=0x7f060002;
+        public static final int CardView=0x7f060003;
+        public static final int CardView_Dark=0x7f060004;
+        public static final int CardView_Light=0x7f060005;
+        public static final int Theme_Base=0x7f060001;
+        public static final int Theme_Sample=0x7f060006;
+        public static final int Widget=0x7f060007;
+        public static final int Widget_SampleMessage=0x7f060000;
+        public static final int Widget_SampleMessageTile=0x7f060008;
     }
     public static final class xml {
         public static final int nfc_tech_filter=0x7f040000;

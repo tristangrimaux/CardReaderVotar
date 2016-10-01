@@ -2,46 +2,60 @@
 <items version="2" >
 
     <item
-        jar="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/exploded-aar/com.android.support/support-v13/21.0.2/classes.jar"
-        jumboMode="false"
+        jar="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.2/jars/classes.jar"
+        jumboMode="true"
         revision="22.0.1"
-        sha1="61965ae058916e6a57950dd61b0164dc866af19a">
-        <dex dex="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/pre-dexed/release/classes-3c8745e1f10965fac2d8b9db3e57e0058e8cbbf8.jar" />
+        sha1="b017100da14f9c158c9f5f2f508333c224b24a7c">
+        <dex dex="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-21.0.2_a91f7a314034901f5f7c95606f0eff4273819804/classes.dex" />
     </item>
     <item
-        jar="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
-        <dex dex="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/pre-dexed/release/classes-24c55ed336b989097b9a5e28011c8207b3b81fcf.jar" />
-    </item>
-    <item
-        jar="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/libs/internal_impl-21.0.2.jar"
-        jumboMode="false"
+        jar="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/jars/libs/internal_impl-21.0.2.jar"
+        jumboMode="true"
         revision="22.0.1"
         sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
-        <dex dex="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/pre-dexed/release/internal_impl-21.0.2-ffa5827c2dfad551403229624ee835e9a34b141a.jar" />
+        <dex dex="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-21.0.2_8f51bdb042e15c7df60da4e615862c9d4b0c6951/classes.dex" />
     </item>
     <item
-        jar="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/exploded-aar/com.android.support/support-v13/21.0.2/libs/internal_impl-21.0.2.jar"
-        jumboMode="false"
+        jar="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="3a7f99c36f3eded26a85fa44183983c6b99ee62e">
+        <dex dex="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_6f25d7d6f5352131de05b1aa919db7f8475f9d0d/classes.dex" />
+    </item>
+    <item
+        jar="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/exploded-aar/com.android.support/support-v13/21.0.2/jars/libs/internal_impl-21.0.2.jar"
+        jumboMode="true"
         revision="22.0.1"
         sha1="9346da9fb778af9e451211bbc3541daced174ba7">
-        <dex dex="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/pre-dexed/release/internal_impl-21.0.2-2738c0719f24082dba8bb2766c6a20c98b51de5d.jar" />
+        <dex dex="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-21.0.2_7a070dcaeb3a233683da143d49f20457c5ecc0cd/classes.dex" />
+    </item>
+    <item
+        jar="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/exploded-aar/com.android.support/support-v13/21.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="61965ae058916e6a57950dd61b0164dc866af19a">
+        <dex dex="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v13-21.0.2_833943deb8a92ef156e7e91e2cd645cac067c616/classes.dex" />
+    </item>
+    <item
+        jar="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="9d71f986e348f30c3d5d99af03eaa6894ef91ad3">
+        <dex dex="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b8335e9c5a6994a2640f53d5df00705d889abff1/classes.dex" />
     </item>
     <item
         jar="/home/tristan/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.2/support-annotations-21.0.2.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="22.0.1"
         sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6">
-        <dex dex="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/pre-dexed/release/support-annotations-21.0.2-1924a08ed73d62005f71548303c931a6eb46bcf3.jar" />
+        <dex dex="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-21.0.2_1924a08ed73d62005f71548303c931a6eb46bcf3/classes.dex" />
     </item>
     <item
-        jar="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.2/classes.jar"
-        jumboMode="false"
+        jar="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/jars/classes.jar"
+        jumboMode="true"
         revision="22.0.1"
-        sha1="b017100da14f9c158c9f5f2f508333c224b24a7c">
-        <dex dex="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/pre-dexed/release/classes-463f316de4485cc5e211bd55bcc5ff88c2e5a330.jar" />
+        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
+        <dex dex="/home/tristan/AndroidStudioProjects/CardReader/Application/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-21.0.2_f6bf081a152594cc143167843d17a2ba8493e2ea/classes.dex" />
     </item>
 
 </items>

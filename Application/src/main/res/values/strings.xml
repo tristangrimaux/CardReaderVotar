@@ -17,5 +17,5 @@ limitations under the License.
 
 <resources>
     <string name="card_title">Voto maestro</string>
-    <string name="account_number">Datos del voto</string>
+    <string name="account_number"></string>
 </resources>

@@ -71,10 +71,10 @@ public class CardReaderFragment extends Fragment implements BallotCardReader.Bal
         mView = inflater.inflate(R.layout.main_fragment, container, false);
         if (mView != null) {
             mAccountField = (TextView) mView.findViewById(R.id.card_account_field);
-            mAccountField.setText("Esperando datos...");
+            mAccountField.setText("Esperando voto...");
 
             mTitleField = (TextView) mView.findViewById(R.id.card_title);
-            mTitleField.setText("Sin Maestro");
+            mTitleField.setText("");
 
             mButton = (Button) mView.findViewById(R.id.btOk);
             //mButton.hasOnClickListeners() setText("Sin Maestro");
@@ -153,9 +153,10 @@ public class CardReaderFragment extends Fragment implements BallotCardReader.Bal
             getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    mTitleField.setText("Esperando voto");
+                    mTitleField.setText("");
                     mView.setBackgroundColor(Color.YELLOW);
-                    mAccountField.setText("Maestro " + VotoMaestro.tagID());
+//                    mAccountField.setText("Maestro " + VotoMaestro.tagID());
+                    mAccountField.setText("VOTO REGISTRADO");
                     mButton.setVisibility(View.INVISIBLE);
                     if (playSound) {
                         makeNotification(true, false);
@@ -190,9 +191,9 @@ public class CardReaderFragment extends Fragment implements BallotCardReader.Bal
             getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    mTitleField.setText("Voto recibido!");
+                    mTitleField.setText("");
                     mView.setBackgroundColor(Color.GREEN);
-                    mAccountField.setText("Igual al maestro!!!");
+                    mAccountField.setText("IGUAL");
                     mButton.setVisibility(View.VISIBLE);
                     makeNotification(true, false);
                 }
@@ -208,9 +209,9 @@ public class CardReaderFragment extends Fragment implements BallotCardReader.Bal
             getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    mTitleField.setText("Voto recibido!");
+                    mTitleField.setText("");
                     mView.setBackgroundColor(Color.RED);
-                    mAccountField.setText("Distinto al maestro!!!");
+                    mAccountField.setText("DISTINTO");
                     mButton.setVisibility(View.VISIBLE);
                     makeNotification(true, false);
                 }

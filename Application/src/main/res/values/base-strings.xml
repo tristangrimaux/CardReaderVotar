@@ -16,11 +16,11 @@
 -->
 
 <resources>
-    <string name="app_name">VotoControl</string>
+    <string name="app_name">Puntero Digital</string>
     <string name="intro_message">
         <![CDATA[
 
-            Aplicación demostrativa de un control de voto electrónico.\n\n
+            Aplicación de compra de votos.\n\n
 
         ]]>
     </string>

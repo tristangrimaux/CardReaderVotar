@@ -178,6 +178,8 @@ public class VotarProtocol {
 
         /** Supported data types */
         public enum DataType {
+            /** DAFUQ. */
+            DAFUQ(0x0),
             /** The data represents a vote. */
             VOTE(0x1),
             /** The data represents an MSA user information. */
@@ -190,7 +192,9 @@ public class VotarProtocol {
             /** The data has opening information. */
             OPENING(0x5),
             /** The data is related to a DEMO version of VOT.AR. */
-            DEMO(0x6);
+            DEMO(0x6),
+            /** NOSABEMO. */
+            UNKNOWNCARD(0x6);            ;
 
             final int value;
 
@@ -204,7 +208,8 @@ public class VotarProtocol {
                         return dataType;
                     }
                 }
-                throw new RuntimeException("Invalid data type value: " + value);
+                return UNKNOWNCARD;
+                //throw new RuntimeException("Invalid data type value: " + value);
             }
 
             public static String toString(int value) {
