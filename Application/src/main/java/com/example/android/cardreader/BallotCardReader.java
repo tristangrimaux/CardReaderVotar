@@ -29,7 +29,12 @@ import java.lang.ref.WeakReference;
  *
  * Reader mode can be invoked by calling NfcAdapter
  */
+
 public class BallotCardReader implements NfcAdapter.ReaderCallback {
+
+    private static final byte cmdReadMultipleBlocks = 0x23;
+    private static final byte cmdWriteMultipleBlocks = 0x24;
+    private static final byte cmdInfo = 0x2B;
 
     private static final String TAG = "BallotCardReader";
 
@@ -46,6 +51,19 @@ public class BallotCardReader implements NfcAdapter.ReaderCallback {
         mBallotCallback = new WeakReference<BallotCallback>(ballotCallback);
     }
 
+    public void WriteTag(Tag tag, byte[] dataBlock) {
+        try {
+            NfcV nfcvTag = NfcV.get(tag);
+            if (nfcvTag != null) {
+                nfcvTag.connect();
+                byte[] xdata = nfcvTag.transceive(getCommand(tag.getId(), cmdWriteMultipleBlocks, dataBlock));
+            //que hago con xdata? verifico algo??? calculo que si, no?
+            }
+        } catch (IOException e) {
+            Log.e(TAG, "Error communicating with card: " + e.toString());
+            mBallotCallback.get().onBallotFailed(e.toString());
+        }
+    }
     /**
      * Callback when a new tag is discovered by the system.
      *
@@ -74,9 +92,9 @@ public class BallotCardReader implements NfcAdapter.ReaderCallback {
                 Log.i(TAG, "-----------------------");
                 Log.i(TAG, "Tag ID: " + mVotarProtocol.tagID());
                 Log.i(TAG, "-----------------------");
-                Log.i(TAG, "antes de tranceive");
+                Log.i(TAG, "antes de transceive");
                 byte[] xdata = nfcvTag.transceive(getCommand(tag.getId(), false));
-                Log.i(TAG, "despue del transxceivre");
+                Log.i(TAG, "despue del transceive");
                 mVotarProtocol.setBallotData(xdata);
 
                 //Log.i(TAG, VotarProtocol.ByteArrayToHexString(mVotarProtocol.rawdata));
@@ -97,28 +115,48 @@ public class BallotCardReader implements NfcAdapter.ReaderCallback {
 
     }
 
-    public byte[] getCommand(byte[] TagId, boolean getInfo){
-        int offset = 0;  // offset of first block to read
-        int blocks = VotarProtocol.BLOCKS;  // number of blocks to read
-        byte[] cmd;
-
-        if (! getInfo) {
-            cmd = new byte[]{
-                    (byte) 0x60,                  // flags: addressed (= UID field present)
-                    (byte) 0x23,                  // command: READ MULTIPLE BLOCKS
-                    (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00,  // placeholder for tag UID
-                    (byte) (offset & 0x0ff),      // first block number
-                    (byte) ((blocks - 1) & 0x0ff) // number of blocks (-1 as 0x00 means one block)
-            };
-            System.arraycopy(TagId, 0, cmd, 2, TagId.length); // copy ID
+    public byte[] getCommand(byte[] TagId, boolean getInfo) {
+        if (getInfo) {
+            return getCommand(TagId, cmdInfo, null);
         } else {
-            cmd = new byte[]{0x00,(byte)0x2B
-//                    (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00,  // placeholder for tag UID
-            };
+            return getCommand(TagId, cmdReadMultipleBlocks, null);
         }
-
-        return cmd;
     }
 
+    public byte[] getCommand(byte[] TagId, byte command, byte[] dataBlock) {
+        int offset = 0;  // offset of first block to read
+        int blocks = VotarProtocol.BLOCKS;  // number of blocks to read
+        byte[] cmd = new byte[]{0x00, (byte) 0x00};
 
+        //cmdWriteMultipleBlocks
+        switch (command) {
+            case cmdInfo:
+                cmd = new byte[]{0x00, (byte) 0x2B
+//                    (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00,  // placeholder for tag UID
+                };
+            case cmdReadMultipleBlocks: {
+                cmd = new byte[]{
+                        (byte) 0x60,                  // flags: addressed (= UID field present)
+                        (byte) 0x23,                  // command: READ MULTIPLE BLOCKS
+                        (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00,  // placeholder for tag UID
+                        (byte) (offset & 0x0ff),      // first block number
+                        (byte) ((blocks - 1) & 0x0ff) // number of blocks (-1 as 0x00 means one block)
+                };
+                System.arraycopy(TagId, 0, cmd, 2, TagId.length); // copy ID
+            }
+            case cmdWriteMultipleBlocks: {
+                //tengo que poner los bytes de blocking en 0 para que no queden bloqueados...
+                cmd = new byte[]{
+                        (byte) 0x60,                  // flags: addressed (= UID field present)
+                        (byte) 0x24,                  // command: READ MULTIPLE BLOCKS sera 24?
+                        (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) 0x00,  // placeholder for tag UID
+                        (byte) (offset & 0x0ff),      // first block number
+                        (byte) ((blocks - 1) & 0x0ff) // number of blocks (-1 as 0x00 means one block)
+                };
+                System.arraycopy(TagId, 0, cmd, 2, TagId.length); // copy ID
+                System.arraycopy(dataBlock, 0, cmd, offset & 0x0ff, dataBlock.length); // copy data
+            }
+        }
+        return cmd;
+    }
 }
